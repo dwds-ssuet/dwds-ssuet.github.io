@@ -101,6 +101,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     var user_email = user.email;
     var user_id = user.uid;
 
+    emailShow.innerText = user_email;
+
 
     //cart price & quantity
     return firebase.database().ref('Cart_TotalPrice/' + user_id).once('value').then(function(snapshot) {
@@ -580,7 +582,7 @@ location.reload();
                                   var quantityPerProductInt = parseInt(quantityPerProduct);
 
                                   console.log(quantityPerProductInt);
-                                   var perProductPrice = 50;
+                                   var perProductPrice = 30;
                                    console.log(perProductPrice);
 
                                    var perProductTotal = quantityPerProductInt*perProductPrice;
@@ -840,7 +842,7 @@ location.reload();
                                   var quantityPerProductInt = parseInt(quantityPerProduct);
 
                                   console.log(quantityPerProductInt);
-                                   var perProductPrice = 50;
+                                   var perProductPrice = 250;
                                    console.log(perProductPrice);
 
                                    var perProductTotal = quantityPerProductInt*perProductPrice;

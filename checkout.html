@@ -44,178 +44,174 @@
 <body>
 
 
-	<!-- header -->
-		<div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-							&times;</button>
-						<h4 class="modal-title" id="myModalLabel">
-							Don't Wait, Login now!</h4>
-					</div>
-					<div class="modal-body modal-body-sub">
-						<div class="row">
-							<div class="col-md-8 modal_body_left modal_body_left1" style="border-right: 1px dotted #C2C2C2;padding-right:3em;">
-								<div class="sap_tabs">
-									<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-										<ul>
-											<li class="resp-tab-item" aria-controls="tab_item-0"><span>Sign in</span></li>
-											<li class="resp-tab-item" aria-controls="tab_item-1"><span>Sign up</span></li>
 
-										</ul>
-										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-											<div class="facts">
-												<!-- firebase authentication -->
-												<div class="register">
+<!-- header -->
+	<div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;</button>
+					<h4 class="modal-title" id="myModalLabel">
+						Don't Wait, Login now!</h4>
+				</div>
+				<div class="modal-body modal-body-sub">
+					<div class="row">
+						<div class="col-md-8 modal_body_left modal_body_left1" style="border-right: 1px dotted #C2C2C2;padding-right:3em;">
+							<div class="sap_tabs">
+								<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+									<ul>
+										<li class="resp-tab-item" aria-controls="tab_item-0"><span>Sign in</span></li>
+										<li class="resp-tab-item" aria-controls="tab_item-1"><span>Sign up</span></li>
 
-														<input id="loginEmail" name="Email" placeholder="Email" type="email" required="">
-														<input id="loginPassword" name="Password" placeholder="Password" type="password" required="">
+									</ul>
+									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+										<div class="facts">
+											<!-- firebase authentication -->
+											<div class="register">
 
-														<div class="sign-up">
-															<input id="loginBtn" type="submit" value="Sign in"/>
-														</div>
+													<input id="loginEmail" name="Email" placeholder="Email" type="email" required="">
+													<input id="loginPassword" name="Password" placeholder="Password" type="password" required="">
 
-												</div>
-												<!-- end firebase authentication -->
+													<div class="sign-up">
+														<input id="loginBtn" type="submit" value="Sign in"/>
+													</div>
 
 											</div>
+											<!-- end firebase authentication -->
+
 										</div>
+									</div>
 
-										<div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
-											<div class="facts">
-												<div class="register">
-														<!-- <input id="signUpName" placeholder="Name" name="Email" type="email" required=""> -->
-														<input id="signUpEmail" placeholder="Email" name="Number" type="email" required="">
-														<input id="signUpPassword" placeholder="Password" name="Password" type="password" required="">
-														<div class="sign-up">
-															<input id="btnSignUp" type="submit" value="Create Account"/>
-														</div>
+									<div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
+										<div class="facts">
+											<div class="register">
+													<!-- <input id="signUpName" placeholder="Name" name="Email" type="email" required=""> -->
+													<input id="signUpEmail" placeholder="Email" name="Number" type="email" required="">
+													<input id="signUpPassword" placeholder="Password" name="Password" type="password" required="">
+													<div class="sign-up">
+														<input id="btnSignUp" type="submit" value="Create Account"/>
+													</div>
 
-												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-								<script type="text/javascript">
-									$(document).ready(function () {
-										$('#horizontalTab').easyResponsiveTabs({
-											type: 'default', //Types: default, vertical, accordion
-											width: 'auto', //auto or any width like 600px
-											fit: true   // 100% fit in a container
-										});
-									});
-								</script>
-
 							</div>
+							<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+							<script type="text/javascript">
+								$(document).ready(function () {
+									$('#horizontalTab').easyResponsiveTabs({
+										type: 'default', //Types: default, vertical, accordion
+										width: 'auto', //auto or any width like 600px
+										fit: true   // 100% fit in a container
+									});
+								});
+							</script>
 
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-		<script>
-			$('#myModal88').modal('show');
-		</script>
-	<div class="header">
-					<div class="container">
-						<div id="w3l_login1" class="w3l_login">
-							<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-						</div>
-
-						<div id="w3l_login2" class="w3l_login">
-							<a href="#" data-toggle="modal" data-target="#myModal16"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-
-
-						</div>
-
-						<div class="w3l_logo">
-							<h1><a href="index.html"><img src="images/bee_logo.png" alt="" /></a></h1>
-
-						</div>
-
-						<div class="cart box_1">
-							<a href="checkout.html">
-								<div class="total">
-								<span></span> (<span id="cartQuantity">xx</span> items)
-								</div>
-								<img src="images/bag.png" alt="" />
-							</a>
-							<p><a id="cartPrice" href="checkout.html" class="simpleCart_empty">xxxx</a></p>
-							<div class="clearfix"> </div>
-						</div>
-
-
+	</div>
+	<script>
+		// $('#myModal88').modal('show');
+	</script>
+<div class="header">
+				<div class="container">
+					<div id="w3l_login1" class="cart box_1">
+						<a href="#" data-toggle="modal" data-target="#myModal88"><h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span><p>Your Account</p></h1></a>
+					</div>
+					<div id="w3l_login2" class="cart box_1">
+						<a href="#" data-toggle="modal" data-target="#myModal16">
+							<h1>
+								<span class="glyphicon glyphicon-user" aria-hidden="true">
+								</span>
+								<p>Your Account</p>
+							</h1></a>
+						<a href="checkout.html">
+							<div class="total">
+							<span id="cartPrice">xxxx</span> (<span id="cartQuantity">xx</span> items)
+							</div>
+							<img src="images/bag.png" alt="" />
+						</a>
+						<!-- <p><a id="cartPrice" href="checkout.html" >xxxx</a></p> -->
 						<div class="clearfix"> </div>
 					</div>
-	</div>
-		<div class="navigation">
-			<div class="container">
-				<nav class="navbar navbar-default">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header nav_2">
-						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+					<div class="w3l_logo">
+						<h1><a href="index.html"><img src="images/bee_logo.png" alt="" /></a></h1>
 					</div>
-					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="act">Home</a></li>
-							<!-- Mega Menu -->
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<div class="row">
-										<div class="col-sm-3">
-											<ul class="multi-column-dropdown">
-												<h6>500ml Bottle</h6>
-												<li><a href="#" data-toggle="modal" data-target="#myModal">Single<span>500ml</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal1">Pack of 24<span>500ml</span></a></li>
-											</ul>
-										</div>
-										<div class="col-sm-3">
-											<ul class="multi-column-dropdown">
-												<h6>1.5 Liter Bottle</h6>
-												<li><a href="#" data-toggle="modal" data-target="#myModal2">Single<span>1.5 Liter</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal3">Pack of 6<span>1.5 Liter</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal4">Pack of 30<span>1.5 Liter</span></a></li>
-											</ul>
-										</div>
-										<div class="col-sm-3">
-											<ul class="multi-column-dropdown">
-												<h6>6 Liter Bottle</h6>
-												<li><a href="#" data-toggle="modal" data-target="#myModal5">Single<span>6 Liter</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal6">Pack of 5<span>6 Liter</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal7">Pack of 10<span>6 Liter</span></a></li>
-
-
-											</ul>
-										</div>
-										<div class="col-sm-3">
-											<ul class="multi-column-dropdown">
-												<h6>19 Liter Can</h6>
-												<li><a href="#" data-toggle="modal" data-target="#myModal8">Single<span>19 Liter</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal9">Pack of 5<span>19 Liter</span></a></li>
-												<li><a href="#" data-toggle="modal" data-target="#myModal10">Pack of 10<span>19 Liter</span></a></li>
-
-											</ul>
-										</div>
-
-										<!-- <div class="col-sm-4">
-											<div class="w3ls_products_pos">
-												<h4>50%<i>Off/-</i></h4>
-												<img src="images/1.jpg" alt=" " class="img-responsive" />
-											</div>
-										</div> -->
-										<div class="clearfix"></div>
+					<div class="clearfix"> </div>
+				</div>
+</div>
+	<div class="navigation">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header nav_2">
+					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html" class="act">Home</a></li>
+						<!-- Mega Menu -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="row">
+									<div class="col-sm-3">
+										<ul class="multi-column-dropdown">
+											<h6>500ml Bottle</h6>
+											<li><a href="#" data-toggle="modal" data-target="#myModal">Single<span>500ml</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal1">Pack of 24<span>500ml</span></a></li>
+										</ul>
 									</div>
-								</ul>
-							</li>
+									<div class="col-sm-3">
+										<ul class="multi-column-dropdown">
+											<h6>1.5 Liter Bottle</h6>
+											<li><a href="#" data-toggle="modal" data-target="#myModal2">Single<span>1.5 Liter</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal3">Pack of 6<span>1.5 Liter</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal4">Pack of 30<span>1.5 Liter</span></a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<ul class="multi-column-dropdown">
+											<h6>6 Liter Bottle</h6>
+											<li><a href="#" data-toggle="modal" data-target="#myModal5">Single<span>6 Liter</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal6">Pack of 5<span>6 Liter</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal7">Pack of 10<span>6 Liter</span></a></li>
+
+
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<ul class="multi-column-dropdown">
+											<h6>19 Liter Can</h6>
+											<li><a href="#" data-toggle="modal" data-target="#myModal8">Single<span>19 Liter</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal9">Pack of 5<span>19 Liter</span></a></li>
+											<li><a href="#" data-toggle="modal" data-target="#myModal10">Pack of 10<span>19 Liter</span></a></li>
+
+										</ul>
+									</div>
+
+									<!-- <div class="col-sm-4">
+										<div class="w3ls_products_pos">
+											<h4>50%<i>Off/-</i></h4>
+											<img src="images/1.jpg" alt=" " class="img-responsive" />
+										</div>
+									</div> -->
+									<div class="clearfix"></div>
+								</div>
+							</ul>
+						</li>
 
 
 
@@ -224,14 +220,14 @@
 
 
 
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="mail.html">Mail Us</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="mail.html">Mail Us</a></li>
+					</ul>
+				</div>
+			</nav>
 		</div>
-	<!-- //header -->
+	</div>
+<!-- //header -->
 
 
 
@@ -469,9 +465,13 @@
 
 									<!-- firebase authentication -->
 									<div class="register">
-
+										<div class="sign-up">
+											<h1>Notification:</h1>
+											<h5 id="user_notify">.......................................................................</h5>
+										</div>
 
 											<div class="sign-up">
+												<h1 id="emailShow" >xxxxxx</h1>
 												<input id="logOutBtn" type="submit" value="Sign Out"/>
 											</div>
 

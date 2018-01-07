@@ -39,6 +39,27 @@ const pass = txtPassword.value;
 
 firebase.auth().signInWithEmailAndPassword(email, pass).then(function(user) {
   var user = $('#myModal12').modal('show');
+
+  var user = firebase.auth().currentUser;
+
+  var user_id = user.uid;
+  console.log(user_id);
+
+
+        //....get totalCartPrice
+        var ctp = 0;
+
+        var data1 = {
+            product_TotalPrice: ctp,
+        }
+        var updates = {};
+        updates['Cart_TotalPrice/' + user_id] = data1;
+        const promise = firebase.database().ref().update(updates);
+        console.log(ctp);
+        promise.catch(e => console.log(e.message));
+
+
+        //....get totalCartPrice
   // logUser(user); // Optional
 }, function(error) {
   // Handle Errors here.
@@ -51,6 +72,7 @@ firebase.auth().signInWithEmailAndPassword(email, pass).then(function(user) {
     $('#myModal14').modal('show');
     }
 });
+
 
 //
 // const promise = auth.signInWithEmailAndPassword(email,pass);
@@ -73,7 +95,9 @@ btnSignUp.addEventListener('click', e => {
   // const auth = firebase.auth();
 
     firebase.auth().createUserWithEmailAndPassword(email, pass).then(function(user) {
-      var user = $('#myModal12').modal('show');
+      var user = $('#myModal12a').modal('show');
+      firebase.auth().signOut();
+
       // logUser(user); // Optional
   }, function(error) {
       // Handle Errors here.
@@ -109,7 +133,7 @@ btnSignUp.addEventListener('click', e => {
 // Add Log out event
 logOutBtn.addEventListener('click', e => {
   firebase.auth().signOut();
-  $('#myModal88').modal('show');
+  $('#myModal88').modal('hide');
   $('#myModal16').modal('hide');
 
 });
@@ -134,9 +158,6 @@ logOutBtn.addEventListener('click', e => {
 
       // myEmail.innerText = emailPrint;
       emailShow.innerText = user_email;
-
-
-
 
 
 

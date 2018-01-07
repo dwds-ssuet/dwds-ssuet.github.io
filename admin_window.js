@@ -144,6 +144,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     $('#admin_edit_cotain').hide();
     $('#admin_save').hide();
 
+
+    $('#admin_bLogin').hide();
+    $('#admin_aLogin').show();
+
     admin_view.addEventListener('click', e => {
 
       $('#admin_view_contain').show();

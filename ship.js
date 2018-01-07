@@ -100,6 +100,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     var user = firebase.auth().currentUser;
     var user_email = user.email;
     var user_id = user.uid;
+    emailShow.innerText = user_email;
 
     // return firebase.database().ref('Cart/' + user_id ).once('value').then(function(snapshot) {
     // console.log(snapshot.val());
@@ -171,47 +172,72 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                     var product_TotalPrice = snapshot.val().product_TotalPrice;
                     console.log(product_TotalPrice);
 
+
                     proceed.addEventListener('click', e => {
                       var user_name = document.getElementById('user_name').value;
                       var user_contact = document.getElementById('user_contact').value;
                       var user_address = document.getElementById('user_address').value;
+
                       console.log(user_name);
                       console.log(user_id);
 
-                      // var data1 = {
-                      //     p1: "imran",
-                      // }
+                      var user_len = user_contact.length;
 
-                      //cart
-                      var data = {
-                          user_name: user_name,
-                          user_contact: user_contact,
-                          user_address: user_address,
-                          user_email: user_email,
-                          p1_name : p1_name,
-                          p1_quantity : p1_quantity,
-                          p1_price : p1_price,
-                          p2_name : p2_name,
-                          p2_quantity : p2_quantity,
-                          p2_price : p2_price,
-                          // p3_name : p3_name,
-                          // p3_quantity : p3_quantity,
-                          // p3_price : p3_price,
-                          product_TotalPrice: product_TotalPrice,
+
+                      if (user_name != null && user_contact != null && user_address != null ) {
+                        //firt condtion
+                        if (user_len == 11  ) {
+
+                          // var data1 = {
+                          //     p1: "imran",
+                          // }
+
+                          //cart
+                          var data = {
+                              user_name: user_name,
+                              user_contact: user_contact,
+                              user_address: user_address,
+                              user_email: user_email,
+                              p1_name : p1_name,
+                              p1_quantity : p1_quantity,
+                              p1_price : p1_price,
+                              p2_name : p2_name,
+                              p2_quantity : p2_quantity,
+                              p2_price : p2_price,
+                              // p3_name : p3_name,
+                              // p3_quantity : p3_quantity,
+                              // p3_price : p3_price,
+                              product_TotalPrice: product_TotalPrice,
+
+                          }
+
+                          var updates = {};
+                          updates['admin/' + user_id] = data;
+                          // updates['admin1/' + user_id + '/' + p1] = data1;
+
+                          const promise = firebase.database().ref().update(updates);
+                          // console.log(getID);
+                          // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+                          // alert('user has been inserted successfully');
+
+                          promise.catch(e => console.log(e.message));
+                          //cart
+
+                          console.log(user_len);
+                          window.location.replace("order.html");
+
+
+                        } //if end
+                        else {
+                          $('#myModal13a').modal('show');
+                        }
+
+                        //firt condtion
+                      }
+                      else {
+                        $('#myModal13a').modal('show');
 
                       }
-
-                      var updates = {};
-                      updates['admin/' + user_id] = data;
-                      // updates['admin1/' + user_id + '/' + p1] = data1;
-
-                      const promise = firebase.database().ref().update(updates);
-                      // console.log(getID);
-                      // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-                      // alert('user has been inserted successfully');
-
-                      promise.catch(e => console.log(e.message));
-                      //cart
 
 
 
