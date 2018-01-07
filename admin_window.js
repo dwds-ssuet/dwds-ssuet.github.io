@@ -148,23 +148,23 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     $('#admin_bLogin').hide();
     $('#admin_aLogin').show();
 
-    admin_view.addEventListener('click', e => {
-
-      $('#admin_view_contain').show();
-      $('#admin_edit_cotain').hide();
-      $('#admin_save').hide();
-
-
-    });
-
-    admin_edit.addEventListener('click', e => {
-
-      $('#admin_edit_cotain').show();
-      $('#admin_view_contain').hide();
-      $('#admin_save').show();
-
-
-    });
+    // admin_view.addEventListener('click', e => {
+    //
+    //   $('#admin_view_contain').show();
+    //   $('#admin_edit_cotain').hide();
+    //   $('#admin_save').hide();
+    //
+    //
+    // });
+    //
+    // admin_edit.addEventListener('click', e => {
+    //
+    //   $('#admin_edit_cotain').show();
+    //   $('#admin_view_contain').hide();
+    //   $('#admin_save').show();
+    //
+    //
+    // });
 
     //printing email address
     var myEmail = document.getElementById('myEmail');
@@ -197,6 +197,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     $('.footer').hide();
     $('#userForm').hide();
 
+
+
+        $('#admin_bLogin').show();
+        $('#admin_aLogin').hide();
   }
 });
 
@@ -234,14 +238,14 @@ pManager.addEventListener('click', e => {
 });
 
 //btnViewProfile
-cManager.addEventListener('click', e => {
-  $('#categoryForm').show();
-  $('#orderForm').hide();
-  $('#userForm').hide();
-  $('#productForm').hide();
-
-
-});
+// cManager.addEventListener('click', e => {
+//   $('#categoryForm').show();
+//   $('#orderForm').hide();
+//   $('#userForm').hide();
+//   $('#productForm').hide();
+//
+//
+// });
 
 
 
@@ -256,10 +260,10 @@ oManager.addEventListener('click', e => {
 
 });
 
-dManager.addEventListener('click', e => {
-  $('#productForm').hide();
-  $('#orderForm').hide();
-  $('#userForm').show();
-  $('#categoryForm').hide();
-
-});
+// dManager.addEventListener('click', e => {
+//   $('#productForm').hide();
+//   $('#orderForm').hide();
+//   $('#userForm').show();
+//   $('#categoryForm').hide();
+//
+// });
